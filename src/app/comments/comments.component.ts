@@ -11,6 +11,7 @@ export class CommentsComponent implements OnInit,AfterViewInit {
 
   constructor(public commentService:CommentService,private cd:ChangeDetectorRef) { }
   @ViewChild(CommentComponent,{static:false}) comment:CommentComponent|undefined;
+  @ViewChildren(CommentComponent) comments:QueryList<CommentComponent>|undefined;
   
 
   ngOnInit(): void {
@@ -18,6 +19,12 @@ export class CommentsComponent implements OnInit,AfterViewInit {
   }
   ngAfterViewInit(): void {
   console.log(this.comment);
+  this.comments?.changes.subscribe((comments:QueryList<CommentComponent>)=>{
+    
+    this.comment=this.comments?.first;
+    console.log(this.comment);
+   
+  })
      
   }
 
