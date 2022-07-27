@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CommentComponent } from './comment/comment.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ShowImageComponent } from './show-image/show-image.component'
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
-    CommentComponent
+    CommentComponent,
+    ShowImageComponent
   ],
   imports: [
     BrowserModule,
