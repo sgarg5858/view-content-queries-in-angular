@@ -8,7 +8,9 @@ import { CommentComponent } from './comment/comment.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShowImageComponent } from './show-image/show-image.component';
 import { CreateViewComponent } from './create-view/create-view.component';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { PresentationRenderingSplitComponent } from './presentation-rendering-split/presentation-rendering-split.component';
+import { AddAttributeDirective } from './presentation-rendering-split/add-attribute.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { HighlightDirective } from './highlight.directive'
     CommentComponent,
     ShowImageComponent,
     CreateViewComponent,
-    HighlightDirective
+    HighlightDirective,
+    PresentationRenderingSplitComponent,
+    AddAttributeDirective
   ],
   imports: [
     BrowserModule,
