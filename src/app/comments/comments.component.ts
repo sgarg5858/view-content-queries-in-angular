@@ -10,7 +10,12 @@ import { ShowImageComponent } from '../show-image/show-image.component';
 })
 export class CommentsComponent implements OnInit,AfterViewInit,AfterContentInit{
 
-  constructor(public commentService:CommentService,private cd:ChangeDetectorRef) { }
+  constructor(
+    public commentService:CommentService,
+    private cd:ChangeDetectorRef,
+    private hostElement:ElementRef<any>
+    ) { }
+    
   @ViewChild(CommentComponent,{static:false}) comment:CommentComponent|undefined;
   @ViewChildren(CommentComponent) comments:QueryList<CommentComponent>|undefined;
   
@@ -25,6 +30,7 @@ export class CommentsComponent implements OnInit,AfterViewInit,AfterContentInit{
   }
 
   ngAfterViewInit(): void {
+    console.log(this.hostElement)
   console.log(this.comment);
   this.comments?.changes.subscribe((comments:QueryList<CommentComponent>)=>{
     this.comment=this.comments?.first;

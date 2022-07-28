@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CommentComponent } from './comment/comment.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ShowImageComponent } from './show-image/show-image.component'
+import { ShowImageComponent } from './show-image/show-image.component';
+import { CreateViewComponent } from './create-view/create-view.component'
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
     CommentComponent,
-    ShowImageComponent
+    ShowImageComponent,
+    CreateViewComponent
   ],
   imports: [
     BrowserModule,
