@@ -7,14 +7,16 @@ import { CommentsComponent } from './comments/comments.component';
 import { CommentComponent } from './comment/comment.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShowImageComponent } from './show-image/show-image.component';
-import { CreateViewComponent } from './create-view/create-view.component'
+import { CreateViewComponent } from './create-view/create-view.component';
+import { HighlightDirective } from './highlight.directive'
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
     CommentComponent,
     ShowImageComponent,
-    CreateViewComponent
+    CreateViewComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
