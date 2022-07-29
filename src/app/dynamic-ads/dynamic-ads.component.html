@@ -1,0 +1,9 @@
+<ng-container *ngIf="(adService.ads$ | async) as ads;else loading">
+    <div>
+        <h1>Advertisements</h1>
+         <app-ads [ads]="ads"></app-ads>
+    </div>    
+</ng-container>
+<ng-template #loading>
+    <h1>Loading ADS</h1>
+</ng-template>

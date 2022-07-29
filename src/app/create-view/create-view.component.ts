@@ -1,4 +1,5 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ComponentFactoryResolver, OnInit, TemplateRef, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
+import { CommentsComponent } from '../comments/comments.component';
 
 @Component({
   selector: 'app-create-view',
@@ -10,7 +11,7 @@ export class CreateViewComponent implements OnInit,AfterViewInit {
   @ViewChild('template') template:TemplateRef<any>|undefined;
   @ViewChild('container',{read:ViewContainerRef}) container:ViewContainerRef|undefined;
 
-  constructor(private changeDetector:ChangeDetectorRef) { }
+  constructor(private changeDetector:ChangeDetectorRef,private componentFactoryResolver:ComponentFactoryResolver) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +33,7 @@ export class CreateViewComponent implements OnInit,AfterViewInit {
     if(this.container && this.template)
     {
       const view:ViewRef = this.container.createEmbeddedView(this.template,{heading:"comments"});
+      // this.container.createComponent(CommentsComponent);
     }
   }
 
