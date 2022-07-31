@@ -1,7 +1,10 @@
 <!-- <h1 #heading>Comments:</h1> -->
 <!-- <ng-content></ng-content> -->
-<ng-container *ngIf="(commentService.comments$ | async) as comments">
-        <app-comment *ngFor="let comment of comments"
-        [comment]="comment">
-        </app-comment>
-</ng-container>
+<div class="container">
+        <h1 class="heading">Comments</h1>
+        <ng-container *ngIf="(commentService.comments$ | async) as comments">
+                <app-comment *ngFor="let comment of comments"
+                [comment]="comment">
+                </app-comment>
+        </ng-container>
+</div>

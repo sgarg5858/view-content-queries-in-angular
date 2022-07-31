@@ -19,14 +19,14 @@ export class CommentsComponent implements OnInit,AfterViewInit,AfterContentInit{
   @ViewChild(CommentComponent,{static:false}) comment:CommentComponent|undefined;
   @ViewChildren(CommentComponent) comments:QueryList<CommentComponent>|undefined;
   
-  @ContentChild(ShowImageComponent) imageComponent:ShowImageComponent|undefined;
+  // @ContentChild(ShowImageComponent) imageComponent:ShowImageComponent|undefined;
 
   ngOnInit(): void {
     this.commentService.getComments();
   }
 
   ngAfterContentInit(): void {
-      console.log(this.imageComponent)
+      // console.log(this.imageComponent)
   }
 
   ngAfterViewInit(): void {
